@@ -37,11 +37,7 @@ function ToDos() {
 
     const onChecked = (e) => {
         let arr = []
-        toDoList.map((e) => {
-            if (!(e.name==="")){
-                arr.push(e)
-            } 
-        })
+        toDoList.map((e) => !(e.name==="") && arr.push(e))
         arr.forEach((element) => {
             if (element.name===e.target.parentNode.parentNode.parentNode.childNodes["0"].childNodes[1].innerText){
                 (element.checked) ? element.checked=false : element.checked=true
